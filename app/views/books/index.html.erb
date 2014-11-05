@@ -2,8 +2,8 @@
 
 <% @books.each do |book| %>
 
-	<%= book.title %>, <%= book.author %>, <% book.year %><br>
-	<%= book.description %><br>
+	<p><%= book.title %>, <%= book.author %>, <% book.year %></p>
+	<p><%= book.description %></p><br>
 	<%= link_to image_tag(book.buy), "/books/#{book.id}" %>
 
 <% end %>

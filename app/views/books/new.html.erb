@@ -1,0 +1,27 @@
+<h1>Add Book</h1>
+
+<%= form_for @book do |f| %>
+	<p>
+		<%= f.label "title" %>
+		<%= f.text_field "title" %>
+	</p>
+	<p>
+		<%= f.label "author" %>
+		<%= f.text_field "author" %>
+	</p>
+	<p>
+		<%= f.label "year" %>
+		<%= f.text_field "year" %>
+	</p>
+	<p>
+		<%= f.label "description" %>
+		<%= f.text_field "description" %>
+	</p>
+	<p>
+		<%= f.label "buy" %>
+		<%= f.text_field "buy" %>
+	</p>
+	<p>
+		<%= f.submit "Save" %>
+	</p>
+<% end %>
