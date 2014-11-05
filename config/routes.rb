@@ -2,17 +2,19 @@ Rails.application.routes.draw do
 
   root 'books#index' 
 
-  get '/books' => 'books#index'
+  resources :books
 
-  get '/books/new' => 'books#new'
-  post '/books' => 'books#create'
+  # get '/books' => 'books#index'
 
-  get '/books/:id' => 'books#show', as: "book"
+  # get '/books/new' => 'books#new'
+  # post '/books' => 'books#create'
 
-  get '/books/:id/edit' => 'books#edit', as: "edit_book"
-  patch '/books/:id' => 'books#update'
+  # get '/books/:id' => 'books#show', as: "book"
 
-  delete 'books/:id' => 'books#delete', as: "delete_book"
+  # get '/books/:id/edit' => 'books#edit', as: "edit_book"
+  # patch '/books/:id' => 'books#update'
+
+  # delete 'books/:id' => 'books#delete', as: "delete_book"
 
   # resources :books
   
