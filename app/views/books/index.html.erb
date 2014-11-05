@@ -1,0 +1,10 @@
+<h1>Books</h1>
+
+<% @books.each do |book| %>
+
+	<%= book.title %>, <%= book.author %>, <% book.year %><br>
+	<%= book.description %><br>
+	<%= link_to image_tag(book.buy), "/books/#{book.id}" %>
+
+<% end %>
+
