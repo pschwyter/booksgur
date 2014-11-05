@@ -7,10 +7,12 @@ Rails.application.routes.draw do
   get '/books/new' => 'books#new'
   post '/books' => 'books#create'
 
-  get '/books/:id' => 'books#show'
+  get '/books/:id' => 'books#show', as: "book"
 
-  get '/books/:id/edit' => 'books#edit'
-  patch '/books' => 'books#update'
+  get '/books/:id/edit' => 'books#edit', as: "edit_book"
+  patch '/books/:id' => 'books#update'
+
+  delete 'books/:id' => 'books#delete', as: "delete_book"
 
   # resources :books
   
