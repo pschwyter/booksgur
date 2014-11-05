@@ -4,7 +4,7 @@
 
 	<p><%= book.title %>, <%= book.author %>, <% book.year %></p>
 	<p><%= book.description %></p><br>
-	<%= link_to image_tag(book.buy), "/books/#{book.id}" %>
+	<%= link_to image_tag(book.url), "/books/#{book.id}" %>
 
 <% end %>
 

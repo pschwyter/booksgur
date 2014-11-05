@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   get '/books/:id' => 'books#show'
 
+  get '/books/:id/edit' => 'books#edit'
+  patch '/books' => 'books#update'
+
   # resources :books
   
   # The priority is based upon order of creation: first created -> highest priority.
