@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141105203831) do
+ActiveRecord::Schema.define(version: 20141106210232) do
 
   create_table "books", force: true do |t|
     t.string   "author"
@@ -19,6 +19,20 @@ ActiveRecord::Schema.define(version: 20141105203831) do
     t.integer  "year"
     t.text     "description"
     t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "upvote",      default: 0
+    t.integer  "downvote",    default: 0
+  end
+
+  create_table "downvotes", force: true do |t|
+    t.integer  "books_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "upvotes", force: true do |t|
+    t.integer  "books_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

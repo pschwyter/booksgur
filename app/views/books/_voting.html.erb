@@ -1,0 +1,3 @@
+	<%= link_to "Upvote", upvote_book_path(book), method: :post, :class => 'btn btn-primary btn-sm' %>
+	<%= link_to "Downvote", downvote_book_path(book), method: :post, :class => 'btn btn-danger btn-sm' %>
+<p> Upvotes:<%= book.upvote %> | Downvotes: <%= book.downvote %> </p>

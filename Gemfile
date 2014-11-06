@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+gem 'pry-rails'
+gem 'awesome_print'
 #Adding Bootstrap based on a guide
 gem 'bootstrap-sass', '~> 3.3.0'
 

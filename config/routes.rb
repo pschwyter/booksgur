@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   root 'books#index' 
 
+  post '/books/:id/upvote' => 'books#upvote', as: "upvote_book"
+  post '/books/:id/downvote' => 'books#downvote', as: "downvote_book"
+
   resources :books
+
 
   # get '/books' => 'books#index'
 

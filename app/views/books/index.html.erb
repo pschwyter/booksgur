@@ -1,12 +1,16 @@
-<h1>Books</h1>
-
-<%= link_to "Add Book", new_book_path %>
-
-<% @books.each do |book| %>
-
-	<p><%= book.title %>, <%= book.author %>, <% book.year %></p>
-	<p><%= book.description %></p><br>
-	<%= link_to image_tag(book.url), "/books/#{book.id}" %>
-
-<% end %>
-
+<div class="container">
+	<div class="row">
+		<h1>Books</h1>
+	</div>
+	<div class="row">
+		<%= link_to "Add Book", new_book_path, :class => 'btn btn-success btn-sm' %>
+	</div>
+	<div class="row">
+		<% @books.each do |book| %>
+			<p><%= book.title %>, <%= book.author %>, <% book.year %></p>
+			<p><%= book.description %></p><br>
+			<%= link_to image_tag(book.url), "/books/#{book.id}", :class => 'book-image' %><br>
+			<%= render :partial => 'voting', :locals => {:book => book } %>
+		<% end %>
+	</div>
+</div>
